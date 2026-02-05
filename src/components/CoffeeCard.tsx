@@ -21,7 +21,9 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
         <div className="bg-light rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full flex flex-col group">
             {/* Image Section - 75% of card height */}
             <div className="relative h-80 bg-gradient-to-br from-secondary to-primary flex items-center justify-center overflow-hidden">
-                <div className="text-8xl opacity-40 group-hover:opacity-60 transition">☕</div>
+                <div className="text-8xl opacity-40 group-hover:opacity-60 transition">
+                    ☕
+                </div>
                 {coffee.is_reserve && (
                     <div className="absolute top-4 right-4 bg-accent text-primary px-3 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
                         🎖️ RESERVE
@@ -74,7 +76,9 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
 
                 {/* Farmer Info - More Prominent */}
                 <p className="text-xs text-text-muted mb-6 font-semibold">
-                    Direct Trade • <span className="text-secondary">{coffee.farmer_name}</span>, {coffee.farmer_country}
+                    Direct Trade •{" "}
+                    <span className="text-secondary">{coffee.farmer_name}</span>
+                    , {coffee.farmer_country}
                 </p>
 
                 {/* Price & CTA */}

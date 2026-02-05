@@ -17,26 +17,91 @@
 
 ---
 
-## 📐 Visual System
+## � User Personas & Stories
 
-### Color Palette (Premium + Warm)
+### Primary Persona: Sarah - The Coffee Enthusiast
+
+**Demographics:** 28-45, urban professional, college-educated, $60k-$120k income
+
+**Behavior:** Currently buys specialty coffee at farmers markets, willing to pay premium for quality and story
+
+**Goal:** Understand if specialty coffee is worth 2x the price of commodity coffee
+
+**Tech Comfort:** High - mobile-first, expects fast, intuitive interface
+
+### Primary User Story - Sarah
+
+| Story | Acceptance Criteria |
+|-------|-------------------|
+| **As a** coffee enthusiast **I want to** browse specialty coffees **so that** I can discover new origins | <ul><li>See all coffees on homepage with clear navigation</li><li>View coffee name, description, price, origin on product card</li><li>See farmer story and understand roast level</li><li>Read flavor notes to match my taste preference</li></ul> |
+| **As a** specialty coffee buyer **I want to** filter coffees by roast level **so that** I can find my preferred profile | <ul><li>Filter buttons for Light, Medium, Medium-Dark, Dark roasts</li><li>Results update instantly without page reload</li><li>Reserve coffees clearly highlighted separately</li><li>Filter selection persists when browsing</li></ul> |
+| **As a** conscious consumer **I want to** learn about coffee sourcing **so that** I can feel good about my purchase | <ul><li>Farmer name and background visible on product card</li><li>Coffee origin (country, region) clearly stated</li><li>Processing method (Washed/Natural/Honey) explained</li><li>Coffee type (Arabica/Canephora) identified with context</li></ul> |
+| **As a** roasting enthusiast **I want to** understand the roasting process **so that** I can appreciate the craft | <ul><li>Behind-the-Scenes page accessible from navigation</li><li>Roasting journals and philosophy clearly written</li><li>Founder expertise and experience visible</li><li>Educational content about coffee growing and processing available</li></ul> |
+
+---
+
+### Secondary Persona: James - The Coffee Connoisseur
+
+**Demographics:** 35-60, high income ($100k+), likely has home espresso machine and burr grinder
+
+**Behavior:** Seeks rare, experimental lots and limited editions; explores multiple brewing methods
+
+**Goal:** Find unique, technically-detailed coffees that demonstrate roasting expertise
+
+**Tech Comfort:** High - expects detailed specifications and technical information
+
+### Secondary User Story - James
+
+| Story | Acceptance Criteria |
+|-------|-------------------|
+| **As a** coffee connoisseur **I want to** know the exact processing method **so that** I can understand how it affects flavor | <ul><li>Processing method (Washed/Natural/Honey) displayed on every coffee</li><li>Descriptions explain processing choice and flavor impact</li><li>Coffee type (Arabica/Canephora) with elevation and origin</li><li>Roast level specified with precision (Light, Medium, Medium-Dark, Dark)</li></ul> |
+| **As a** experimental coffee enthusiast **I want to** find limited-edition and reserve lots **so that** I can discover unique offerings | <ul><li>Reserve coffees clearly badged as "Limited Edition"</li><li>Reserve section easily accessible from catalog</li><li>Availability information current and honest</li><li>Batch information and scarcity signals visible</li></ul> |
+| **As a** coffee expert **I want to** understand the roasting philosophy **so that** I can appreciate technical roasting choices | <ul><li>Behind-the-Scenes content explains temperature control approach</li><li>Roasting journals detail heat curves and timing decisions</li><li>Founder credentials and roasting experience visible</li><li>Innovation and experimentation with new origins highlighted</li></ul> |
+| **As a** direct-trade advocate **I want to** know the farmer and sourcing story **so that** I can make informed ethical purchasing decisions | <ul><li>Farmer name, location, and country on every coffee</li><li>Detailed farmer bios showing background and philosophy</li><li>Farmer photos to personalize connection</li><li>Sourcing transparency and relationship-building emphasized</li></ul> |
+
+---
+
+### Tertiary Persona: Mark - The Brand Advocate
+
+**Demographics:** 25-40, social media active (Instagram), values artisanal/small business support
+
+**Behavior:** Enjoys sharing exclusive products with friends; likes being "in the know"
+
+**Goal:** Share unique, limited-edition coffees and tell the brand story
+
+**Tech Comfort:** High - Instagram-native, expects shareable content and compelling visuals
+
+### Tertiary User Story - Mark
+
+| Story | Acceptance Criteria |
+|-------|-------------------|
+| **As a** social enthusiast **I want to** find limited-edition coffees **so that** I can share something exclusive with friends | <ul><li>Reserve coffees clearly marked as "Limited Edition"</li><li>Exclusivity messaging prominent on cards</li><li>Visual design is high-quality and Instagram-shareable</li><li>Supply/scarcity information visible to create intrigue</li></ul> |
+| **As a** brand advocate **I want to** tell my friends the Bean & Brew story **so that** they understand why it's special | <ul><li>Brand story accessible and compelling on homepage</li><li>Farmer stories with visuals shareable across platforms</li><li>Roasting philosophy content educational and interesting</li><li>Clear differentiation from commodity coffee messaging</li></ul> |
+
+---
+
+## 🎨 Design Vision
+
+### Color Palette (Warm Earth Tones)
 
 ```
-Primary: #1a1a1a (Deep Black - authority, premium)
-Secondary: #8B7355 (Coffee Brown - warmth, authenticity)
-Accent: #D4A574 (Gold/Tan - luxury, exclusivity)
-Light BG: #FAFAF8 (Off-white - clean, readable)
-Text: #2C2C2C (Near-black - high contrast)
-Muted: #999999 (Gray - secondary info)
+Primary: #F5E6D3 (Warm Cream - welcoming, coffee-adjacent)
+Secondary: #D4885A (Warm Brown - authentic, earthy)
+Accent: #C85A3A (Rust/Orange - warmth, energy, calls-to-action)
+Light BG: #FFFBF7 (Warm Off-white - inviting, soft)
+Text: #5C4A3D (Warm Brown - natural, readable)
+Muted: #9B8B7E (Warm Gray - secondary info)
+Border: #E8DCC8 (Warm Beige - subtle dividers)
 ```
 
-**Why this over the cream/green/sienna?**
+**Why this warm palette?**
 
-- More premium and sophisticated
-- Coffee brown references the product directly
-- Gold accent creates luxury/exclusivity feeling
-- Darker backgrounds feel more upscale
-- Better contrast for readability
+- Immediately evokes coffee and warmth
+- Approachable and inviting (not cold/dark)
+- Sarah's first impression: "This feels authentic and artisanal"
+- Marcus's first impression: "This feels trustworthy and premium"
+- Cream + warm brown create natural coffee aesthetic
+- Rust accent draws eyes to CTAs without aggression
 
 ### Typography
 

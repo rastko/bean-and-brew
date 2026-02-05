@@ -11,7 +11,9 @@ export default function Footer() {
                             BEAN & BREW
                         </h4>
                         <p className="text-light text-sm leading-relaxed mb-4">
-                            Specialty coffee roasted fresh, sourced directly from farmers we know and trust. Three generations of roasting excellence.
+                            Specialty coffee roasted fresh, sourced directly
+                            from farmers we know and trust. Three generations of
+                            roasting excellence.
                         </p>
                         <p className="text-accent text-xs font-bold tracking-widest">
                             EST. 1952
@@ -64,8 +66,12 @@ export default function Footer() {
                         <h5 className="font-bold text-accent mb-5 uppercase tracking-wider text-sm">
                             Get in Touch
                         </h5>
-                        <p className="text-light text-sm mb-2">hello@beanandbrew.coffee</p>
-                        <p className="text-light text-sm mb-6">+1 (555) COFFEE-1</p>
+                        <p className="text-light text-sm mb-2">
+                            hello@beanandbrew.coffee
+                        </p>
+                        <p className="text-light text-sm mb-6">
+                            +1 (555) COFFEE-1
+                        </p>
                         <p className="text-text-muted text-xs">
                             Available Monday-Friday, 9am-5pm EST
                         </p>

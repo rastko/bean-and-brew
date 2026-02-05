@@ -61,7 +61,9 @@ export default function BehindTheScenes() {
                             Behind the Scenes
                         </h1>
                         <p className="text-lg text-light max-w-2xl leading-relaxed">
-                            Discover the art and craft behind Bean & Brew. From roasting journals to behind-the-scenes stories, see how we create exceptional coffee from seed to cup.
+                            Discover the art and craft behind Bean & Brew. From
+                            roasting journals to behind-the-scenes stories, see
+                            how we create exceptional coffee from seed to cup.
                         </p>
                     </div>
                 </section>
@@ -113,14 +115,11 @@ export default function BehindTheScenes() {
                                                 Published{" "}
                                                 {new Date(
                                                     item.published_at,
-                                                ).toLocaleDateString(
-                                                    "en-US",
-                                                    {
-                                                        year: "numeric",
-                                                        month: "long",
-                                                        day: "numeric",
-                                                    },
-                                                )}
+                                                ).toLocaleDateString("en-US", {
+                                                    year: "numeric",
+                                                    month: "long",
+                                                    day: "numeric",
+                                                })}
                                             </p>
                                         </div>
                                     </div>
@@ -144,7 +143,10 @@ export default function BehindTheScenes() {
                                     Temperature Control
                                 </h3>
                                 <p className="text-light leading-relaxed">
-                                    Precise heat management brings out the best in each bean's unique characteristics. We monitor every degree to achieve perfect balance.
+                                    Precise heat management brings out the best
+                                    in each bean's unique characteristics. We
+                                    monitor every degree to achieve perfect
+                                    balance.
                                 </p>
                             </div>
 
@@ -155,7 +157,9 @@ export default function BehindTheScenes() {
                                     Timing Precision
                                 </h3>
                                 <p className="text-light leading-relaxed">
-                                    Every second matters. We roast to exact specifications for consistency and quality, honoring decades of expertise.
+                                    Every second matters. We roast to exact
+                                    specifications for consistency and quality,
+                                    honoring decades of expertise.
                                 </p>
                             </div>
 
@@ -166,7 +170,9 @@ export default function BehindTheScenes() {
                                     Sensory Expertise
                                 </h3>
                                 <p className="text-light leading-relaxed">
-                                    Our roasters use sight, smell, and sound to achieve the perfect roast every time. Experience matters.
+                                    Our roasters use sight, smell, and sound to
+                                    achieve the perfect roast every time.
+                                    Experience matters.
                                 </p>
                             </div>
                         </div>

@@ -7,7 +7,9 @@ import { supabase, Coffee } from "@/lib/supabase";
 export default function Home() {
     const [coffees, setCoffees] = useState<Coffee[]>([]);
     const [loading, setLoading] = useState(true);
-    const [filter, setFilter] = useState<"all" | "light" | "medium" | "dark" | "reserve">("all");
+    const [filter, setFilter] = useState<
+        "all" | "light" | "medium" | "dark" | "reserve"
+    >("all");
 
     useEffect(() => {
         fetchCoffees();
@@ -60,10 +62,15 @@ export default function Home() {
                                     SINCE 1952
                                 </p>
                                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight font-georgia">
-                                    Three generations. One obsession: the perfect roast.
+                                    Three generations. One obsession: the
+                                    perfect roast.
                                 </h1>
                                 <p className="text-lg text-text-primary mb-8 leading-relaxed font-georgia">
-                                    From the highlands of Ethiopia to the volcanic soils of Guatemala, we've spent over 70 years perfecting the art of coffee roasting. Every bean tells a story of land, labor, and love.
+                                    From the highlands of Ethiopia to the
+                                    volcanic soils of Guatemala, we've spent
+                                    over 70 years perfecting the art of coffee
+                                    roasting. Every bean tells a story of land,
+                                    labor, and love.
                                 </p>
 
                                 {/* CTAs */}
@@ -96,30 +103,54 @@ export default function Home() {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             {/* Rating */}
                             <div className="text-center">
-                                <p className="text-4xl font-bold text-accent mb-2">4.9★</p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">Customer Rating</p>
-                                <p className="text-xs text-text-muted mt-1">1,200+ reviews</p>
+                                <p className="text-4xl font-bold text-accent mb-2">
+                                    4.9★
+                                </p>
+                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
+                                    Customer Rating
+                                </p>
+                                <p className="text-xs text-text-muted mt-1">
+                                    1,200+ reviews
+                                </p>
                             </div>
 
                             {/* Origins */}
                             <div className="text-center">
-                                <p className="text-4xl font-bold text-secondary mb-2">50+</p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">Coffee Origins</p>
-                                <p className="text-xs text-text-muted mt-1">Six continents</p>
+                                <p className="text-4xl font-bold text-secondary mb-2">
+                                    50+
+                                </p>
+                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
+                                    Coffee Origins
+                                </p>
+                                <p className="text-xs text-text-muted mt-1">
+                                    Six continents
+                                </p>
                             </div>
 
                             {/* Customers */}
                             <div className="text-center">
-                                <p className="text-4xl font-bold text-accent mb-2">10k+</p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">Happy Customers</p>
-                                <p className="text-xs text-text-muted mt-1">And growing daily</p>
+                                <p className="text-4xl font-bold text-accent mb-2">
+                                    10k+
+                                </p>
+                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
+                                    Happy Customers
+                                </p>
+                                <p className="text-xs text-text-muted mt-1">
+                                    And growing daily
+                                </p>
                             </div>
 
                             {/* Direct Trade */}
                             <div className="text-center">
-                                <p className="text-4xl font-bold text-secondary mb-2">100%</p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">Direct Trade</p>
-                                <p className="text-xs text-text-muted mt-1">Fair prices always</p>
+                                <p className="text-4xl font-bold text-secondary mb-2">
+                                    100%
+                                </p>
+                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
+                                    Direct Trade
+                                </p>
+                                <p className="text-xs text-text-muted mt-1">
+                                    Fair prices always
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -127,8 +158,13 @@ export default function Home() {
 
                 {/* COLLECTION HEADER */}
                 <section className="bg-light max-w-7xl mx-auto w-full px-4 pt-16">
-                    <h2 className="text-4xl font-bold text-primary mb-2">Our Collection</h2>
-                    <p className="text-text-muted mb-8">Hand-selected coffees from direct relationships with farmers worldwide.</p>
+                    <h2 className="text-4xl font-bold text-primary mb-2">
+                        Our Collection
+                    </h2>
+                    <p className="text-text-muted mb-8">
+                        Hand-selected coffees from direct relationships with
+                        farmers worldwide.
+                    </p>
 
                     {/* FILTER PILLS */}
                     <div className="flex flex-wrap gap-3 mb-12">
