@@ -13,7 +13,7 @@ Bean & Brew is a direct-to-consumer e-commerce platform for an artisanal special
 
 **Target Launch:** Immediate  
 **Development Time:** 8 hours  
-**Tech Stack:** Next.js 14 + Supabase + Vercel  
+**Tech Stack:** Next.js 15 + React 19 + Supabase + Vercel  
 **User Base (Phase 1):** Direct-to-consumer coffee enthusiasts
 
 ---
@@ -411,7 +411,7 @@ Text: #2C2C2C (Dark Gray)
 
 ### Frontend
 
-- **Framework:** Next.js 14
+- **Framework:** Next.js 15
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Rendering:** Server-side where possible, client-side for interactivity

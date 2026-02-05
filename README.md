@@ -2,7 +2,7 @@
 
 > A production-ready specialty coffee e-commerce platform demonstrating BMAD methodology and modern full-stack development with AI assistance.
 
-**Status:** ✅ Complete and deployable | **Built in:** 8 hours | **Tech:** Next.js 14 + Supabase + TypeScript
+**Status:** ✅ Complete and deployable | **Built in:** 8 hours | **Tech:** Next.js 15 + React 19 + Supabase + TypeScript
 
 ---
 
@@ -98,7 +98,7 @@ content (3 records)
 
 | Layer | Choice | Rationale |
 |-------|--------|-----------|
-| Framework | Next.js 14 | Modern, full-stack, easy deployment |
+| Framework | Next.js 15 | Modern, full-stack, easy deployment |
 | Database | Supabase/PostgreSQL | Real database, managed, free tier |
 | Language | TypeScript | Type safety, professional standard |
 | Styling | Tailwind CSS | Rapid development, consistency |
@@ -160,8 +160,8 @@ app/
 
 | Component | Technology | Why |
 |-----------|------------|-----|
-| Frontend Framework | Next.js 14 | Full-stack capability, fast deployment |
-| UI Library | React 18 | Component-based, performant |
+| Frontend Framework | Next.js 15 | Full-stack capability, fast deployment |
+| UI Library | React 19 | Component-based, performant |
 | Language | TypeScript | Type safety, professional standard |
 | Styling | Tailwind CSS | Rapid development, consistency |
 | Database | Supabase (PostgreSQL) | Real database, managed, free tier |
