@@ -15,8 +15,8 @@ I've completed the Bean & Brew test task using the **BMAD Method** with Claude C
 
 - ✅ Working web application (5 pages, filtering, shopping cart)
 - ✅ Complete product documentation (PRD, architecture, business model)
-- ✅ Live demo: [Deploy link will go here]
-- ✅ GitHub repository: [Repo link will go here]
+- ✅ Live demo: https://bean-and-brew-sandy.vercel.app
+- ✅ GitHub repository: https://github.com/rastko/bean-and-brew
 - ✅ Full source code with clean architecture
 
 ---
@@ -389,5 +389,6 @@ For technical details, implementation decisions, or feature explanations, see:
 ---
 
 **Status:** ✅ Complete & Ready for Review  
-**Estimated Time:** 8 hours (analysis, architecture, implementation, documentation, deployment setup)  
-**Live Demo:** [Will update with Vercel URL after deployment]
+**Estimated Time:** 8 hours (analysis, architecture, implementation, documentation, deployment)  
+**Live Demo:** https://bean-and-brew-sandy.vercel.app  
+**GitHub Repository:** https://github.com/rastko/bean-and-brew
