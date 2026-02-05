@@ -2,7 +2,7 @@
 
 > A premium specialty coffee e-commerce experience with artisanal design and modern full-stack architecture.
 
-**Status:** ✅ Phase 1 MVP Complete | **Tech:** Next.js 15 + React 19 + Supabase + TypeScript + Tailwind CSS
+**Status:** ✅ Phase 1 MVP Complete - Deployed | **Live:** https://bean-and-brew-sandy.vercel.app | **Tech:** Next.js 15 + React 19 + Supabase + TypeScript + Tailwind CSS
 
 ---
 
@@ -410,41 +410,36 @@ Each persona has detailed user stories in `PRD.md`.
 - ✅ Header with logo and navigation
 - ✅ Developer handoff specification (DEMO_SPEC.md)
 
-**In Progress:**
+**Deployed:**
 
-- 🚧 Product detail page (`/products/[id]`)
-- 🚧 CoffeeCard component refinement (match 14+ element spec)
-- 🚧 Footer design review (UX Designer)
-
-**Next Steps:**
-
-1. Implement product detail page per DEMO_SPEC.md
-2. UX Designer reviews footer component
-3. Update CoffeeCard to match full specification
-4. Quality assurance testing
-5. Vercel deployment
+- ✅ All 5 pages fully functional and live
+- ✅ Product detail page implemented
+- ✅ CoffeeCard component complete with 14+ specs
+- ✅ Footer redesigned with warm aesthetic
+- ✅ Vercel deployment successful
 
 ---
 
 ## 🚀 Deployment
 
-### Deploy to Vercel (Recommended)
+### Live on Vercel ✅
 
-```bash
-# 1. Push to GitHub
-git push
+**Production URL:** https://bean-and-brew-sandy.vercel.app  
+**GitHub Repository:** https://github.com/rastko/bean-and-brew
 
-# 2. In Vercel dashboard:
-#    - Connect repo
-#    - Add env variables (SUPABASE_URL, SUPABASE_ANON_KEY)
-#    - Deploy
+Deployed with:
 
-# 3. Get live URL (e.g., bean-and-brew.vercel.app)
-```
+- Next.js 15 on Vercel Edge Network
+- Supabase PostgreSQL backend
+- Environment variables configured
+- Automatic CICD on push to main
 
-**Time:** 5 minutes  
-**Cost:** Free tier (Vercel + Supabase)  
-**Result:** Live demo URL for job application
+**Test the live app:**
+
+1. Browse products with filtering
+2. View product details
+3. Add items to cart (persists across sessions)
+4. Test responsive design on mobile
 
 ---
 
@@ -460,7 +455,7 @@ git push
 | **Pages**      | 5 (Landing, Products, Product Detail, Cart, 404) |
 | **Components** | Header, CoffeeCard, Footer + page components     |
 | **Responsive** | Mobile-first with Tailwind breakpoints           |
-| **Status**     | 🚧 Phase 1 MVP in development                    |
+| **Status**     | ✅ Phase 1 MVP Complete & Deployed               |
 
 ---
 
