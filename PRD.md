@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Date:** February 5, 2026  
-**Status:** MVP - Ready for Launch  
+**Status:** ✅ MVP Complete - Ready for Launch  
 **Product Owner:** Rastko
 
 ---
@@ -31,13 +31,28 @@ Bean & Brew is an excellent specialty coffee roaster currently limited to farmer
 
 **Why Now?** Coffee enthusiasts increasingly seek artisanal, ethically-sourced products with authentic brand stories. The barriers to direct sales (website, payment, shipping) are now minimal.
 
-### Success Definition (Phase 1)
+### Success Definition (Phase 1 - MVP)
 
-- ✅ Working online storefront
-- ✅ Showcases 5+ specialty coffees with farmer stories
-- ✅ Demonstrates sourcing transparency
-- ✅ Creates emotional connection through content
-- ✅ Positioned for e-commerce (payment/shipping Phase 2)
+- ✅ Working online storefront with product catalog
+- ✅ Showcases 5+ specialty coffees with detailed specs
+- ✅ Demonstrates sourcing transparency (farmer stories, origins)
+- ✅ Creates emotional connection through storytelling
+- ✅ Cart functionality with persistence
+- ✅ Positioned for Phase 2 expansion
+
+---
+
+## 🔄 Phase 2 Features (Future)
+
+The following features are intentionally deferred to Phase 2 to keep MVP lean and focused:
+
+- **Origins & Content Hub**: Educational content, roasting journals, founder stories, videos
+- **Community Features**: Tasting notes, ratings, coffee passport, shared exploration
+- **Intelligent Taste Matching**: Personalized recommendations based on preferences
+- **Coffee Explorer Community**: Community sharing, discovery, social features
+- **Advanced Reserve System**: Monthly exclusive drops, voting, private community access
+- **Payment Integration**: Checkout, payments, shipping logistics
+- **User Accounts**: Registration, wishlists, order history
 
 ---
 
@@ -61,12 +76,14 @@ Bean & Brew is an excellent specialty coffee roaster currently limited to farmer
 
 **User Stories:**
 
-| Story                                                                                                                   | Acceptance Criteria                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **As a** coffee enthusiast **I want to** browse specialty coffees **so that** I can discover new origins                | <ul><li>See all coffees on homepage</li><li>View coffee name, description, price, origin</li><li>See farmer story and image</li><li>Understand roast level and flavor notes</li></ul>       |
-| **As a** specialty coffee buyer **I want to** filter coffees by roast level **so that** I can find my preferred profile | <ul><li>Filter options: Light, Medium, Medium-Dark, Dark</li><li>Results update instantly</li><li>Reserve coffee highlighted separately</li></ul>                                           |
-| **As a** conscious consumer **I want to** learn about coffee sourcing **so that** I can feel good about my purchase     | <ul><li>Farmer name and photo visible on each coffee</li><li>Farmer story displayed prominently</li><li>Coffee origin (country, region) clear</li><li>Processing method explained</li></ul> |
-| **As a** roasting enthusiast **I want to** understand the roasting process **so that** I can appreciate the craft       | <ul><li>Behind-the-Scenes section accessible</li><li>Roasting journal entries visible</li><li>Founder philosophy explained</li><li>Educational content about coffee</li></ul>               |
+| Story                                                                                                                   | Acceptance Criteria                                                                                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **As a** coffee enthusiast **I want to** browse specialty coffees **so that** I can discover new origins                | <ul><li>See all coffees on homepage</li><li>View coffee name, description, price, origin</li><li>See farmer story and image</li><li>Understand roast level and flavor notes</li></ul>                            |
+| **As a** specialty coffee buyer **I want to** filter coffees by roast level **so that** I can find my preferred profile | <ul><li>Filter options: Light, Medium, Medium-Dark, Dark</li><li>Results update instantly</li><li>Reserve coffee highlighted separately</li></ul>                                                                |
+| **As a** conscious consumer **I want to** learn about coffee sourcing **so that** I can feel good about my purchase     | <ul><li>Farmer name and photo visible on each coffee</li><li>Farmer story displayed prominently</li><li>Coffee origin (country, region) clear</li><li>Processing method explained</li></ul>                      |
+| **As a** roasting enthusiast **I want to** understand the roasting process **so that** I can appreciate the craft       | <ul><li>Origins page accessible</li><li>Roasting journal entries visible</li><li>Founder philosophy explained</li><li>Educational content about coffee</li></ul>                                                 |
+| **As a** coffee buyer **I want to** add coffees to a cart **so that** I can review my selections before purchase        | <ul><li>Add to Cart button on each coffee card</li><li>Cart icon in header shows item count</li><li>Cart page lists all items with quantities and totals</li><li>Can update quantities or remove items</li></ul> |
+| **As a** coffee enthusiast **I want my** cart to persist **so that** I don't lose my selections when browsing           | <ul><li>Cart contents saved in browser</li><li>Cart persists across page refreshes</li><li>Can close browser and return later to same cart</li></ul>                                                             |
 
 ### Secondary User: Coffee Connoisseur (James)
 
@@ -92,7 +109,7 @@ Bean & Brew is an excellent specialty coffee roaster currently limited to farmer
 | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **As a** coffee connoisseur **I want to** know the exact processing method **so that** I can understand how it affects flavor                | <ul><li>Processing method (Washed/Natural/Honey) displayed on every coffee</li><li>Descriptions explain processing choice and impact</li><li>Coffee type (Arabica/Canephora) shown</li><li>Roast level specified with precision</li></ul>                       |
 | **As a** experimental coffee enthusiast **I want to** find limited-edition and reserve lots **so that** I can discover unique offerings      | <ul><li>Reserve coffees clearly badged as "Limited"</li><li>Reserve section easily accessible</li><li>Batch size or scarcity visible</li><li>Availability info current</li></ul>                                                                                |
-| **As a** coffee expert **I want to** understand the roasting philosophy **so that** I can appreciate the technical roasting choices          | <ul><li>Behind-the-Scenes content explains roasting approach</li><li>Roasting journals detail heat curves and timing decisions</li><li>Founder expertise and credentials visible</li><li>Experimentation and innovation highlighted</li></ul>                   |
+| **As a** coffee expert **I want to** understand the roasting philosophy **so that** I can appreciate the technical roasting choices          | <ul><li>Origins page content explains roasting approach</li><li>Roasting journals detail heat curves and timing decisions</li><li>Founder expertise and credentials visible</li><li>Experimentation and innovation highlighted</li></ul>                        |
 | **As a** direct-trade advocate **I want to** know the farmer and sourcing story **so that** I can make informed ethical purchasing decisions | <ul><li>Farmer name, location, country displayed on every coffee</li><li>Detailed farmer bios (background, philosophy, experience)</li><li>Farmer photos to personalize connection</li><li>Sourcing transparency and relationship-building emphasized</li></ul> |
 
 ### Tertiary User: Brand Advocate (Mark)
@@ -114,10 +131,10 @@ Bean & Brew is an excellent specialty coffee roaster currently limited to farmer
 
 **User Stories:**
 
-| Story                                                                                                                          | Acceptance Criteria                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **As a** social enthusiast **I want to** find limited-edition coffees **so that** I can share something exclusive with friends | <ul><li>Reserve coffees clearly marked as "Limited Edition"</li><li>Exclusivity and scarcity messaging prominent</li><li>Visual design shareable (high-quality photos)</li><li>Supply info visible to create urgency</li></ul>         |
-| **As a** brand advocate **I want to** tell my friends the Bean & Brew story **so that** they understand why it's special       | <ul><li>Brand story accessible and compelling</li><li>Farmer stories with visuals shareable</li><li>Content about roasting process educational and interesting</li><li>Clear differentiation from commodity coffee messaging</li></ul> |
+| Story                                                                                                                          | Acceptance Criteria                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **As a** social enthusiast **I want to** find limited-edition coffees **so that** I can share something exclusive with friends | <ul><li>Reserve coffees clearly marked as "Limited Edition"</li><li>Exclusivity and scarcity messaging prominent</li><li>Visual design shareable (high-quality photos)</li><li>Supply info visible to create urgency</li></ul>                         |
+| **As a** brand advocate **I want to** tell my friends the Bean & Brew story **so that** they understand why it's special       | <ul><li>Brand story accessible and compelling on Origins page</li><li>Farmer stories with visuals shareable</li><li>Content about roasting process educational and interesting</li><li>Clear differentiation from commodity coffee messaging</li></ul> |
 
 ### Secondary User: Brand Advocate (Mark)
 
@@ -235,13 +252,13 @@ AND the story mentions "limited edition"
 
 ---
 
-### Feature 3: Behind-the-Scenes Content
+### Feature 3: Origins & Content Hub
 
-**Description:** Educational content about roasting and sourcing
+**Description:** Educational content about roasting, sourcing, and farmer stories
 
 **Functional Requirements:**
 
-- Content hub page at `/behind-scenes`
+- Content hub page at `/origins`
 - Display 3+ content items:
     - Roasting journals (text)
     - Videos (embedded player or link)
@@ -256,7 +273,7 @@ AND the story mentions "limited edition"
 **Acceptance Criteria:**
 
 ```
-GIVEN a user visits /behind-scenes
+GIVEN a user visits /origins
 WHEN the page loads
 THEN they see 3 content items
 AND each shows title, description, type, and date
@@ -277,18 +294,20 @@ OR they're directed to the video
 
 ---
 
-### Feature 4: Navigation & User Experience
+### Feature 3: Navigation & User Experience
 
 **Description:** Clear navigation and intuitive interface
 
 **Functional Requirements:**
 
 - Header with logo and nav:
-    - "Shop" → `/` (product catalog)
-    - "Behind-the-Scenes" → `/behind-scenes`
+    - "Coffee Collection" → `/` (product catalog)
+    - "Cart" → `/cart` (shopping cart)
 - Footer with links and info
 - Mobile-optimized menu
 - Responsive design (all devices)
+
+**Note:** Origins/content hub is deferred to Phase 2.
 
 **Acceptance Criteria:**
 
@@ -304,6 +323,75 @@ WHEN they need to navigate
 THEN menu is accessible and easy to use
 AND buttons are large enough to tap
 ```
+
+---
+
+### Feature 4: Shopping Cart
+
+**Description:** Add coffees to cart and manage quantities before checkout
+
+**Functional Requirements:**
+
+- Add to cart from product catalog:
+    - "Add to Cart" button on each coffee card
+    - Select quantity (1-10)
+    - Visual confirmation when item added
+- Cart page at `/cart`:
+    - List all cart items with coffee name, image, price, quantity
+    - Update quantity controls (+ / - buttons)
+    - Remove item button
+    - Display subtotal for each item (price × quantity)
+    - Display cart total
+- Cart badge in header:
+    - Show cart item count
+    - Update in real-time when items added/removed
+- Empty cart state:
+    - "Your cart is empty" message
+    - "Continue Shopping" link to product catalog
+- Cart persistence:
+    - Cart stored in browser localStorage
+    - Cart persists across page refreshes
+    - Cart clears on browser close (session-based)
+
+**Acceptance Criteria:**
+
+```
+GIVEN a user views the product catalog
+WHEN they click "Add to Cart" on a coffee
+THEN the coffee is added to cart with quantity 1
+AND they see a confirmation message
+AND the cart badge updates to show item count
+
+GIVEN a user has items in cart
+WHEN they click the cart icon in header
+THEN they navigate to /cart page
+AND they see all cart items listed
+AND they see subtotal and total
+
+GIVEN a user is on the cart page
+WHEN they click the + button on an item
+THEN quantity increases by 1
+AND subtotal and total update
+
+GIVEN a user wants to remove an item
+WHEN they click "Remove" button
+THEN item is removed from cart
+AND totals update
+AND if cart is empty, they see empty state message
+
+GIVEN a user refreshes the page
+WHEN the page reloads
+THEN cart contents persist (localStorage)
+AND cart badge shows correct count
+```
+
+**Technical Requirements:**
+
+- Cart state managed in React context or local state
+- Cart data stored in localStorage
+- No backend persistence (Phase 2: user accounts + saved carts)
+- Cart totals calculated client-side
+- Price formatting: USD with 2 decimals
 
 ---
 
@@ -441,7 +529,7 @@ Text: #2C2C2C (Dark Gray)
 
 | Metric                    | Target                 | Definition                                |
 | ------------------------- | ---------------------- | ----------------------------------------- |
-| **Feature Completeness**  | 100%                   | All 4 features working                    |
+| **Feature Completeness**  | 100%                   | All 5 features working                    |
 | **Page Load Time**        | < 2s                   | Measured on 4G                            |
 | **Mobile Responsiveness** | 100%                   | All pages responsive                      |
 | **Uptime**                | 99%                    | Zero errors in first week                 |
@@ -454,10 +542,10 @@ Text: #2C2C2C (Dark Gray)
 
 The following features are explicitly **NOT included** in MVP:
 
-- ❌ **Payment processing** (Stripe, PayPal)
+- ❌ **Payment processing** (Stripe, PayPal) — Cart exists but no checkout
 - ❌ **Shipping integration** (EasyPost, ShipStation)
 - ❌ **User authentication** (login/signup)
-- ❌ **Shopping cart**
+- ❌ **Saved carts** (requires user accounts) — localStorage only for MVP
 - ❌ **Wishlist/favorites**
 - ❌ **Customer reviews**
 - ❌ **Personalization** (recommendations)

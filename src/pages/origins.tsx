@@ -12,7 +12,7 @@ interface ContentItem {
     published_at: string;
 }
 
-export default function BehindTheScenes() {
+export default function Origins() {
     const [content, setContent] = useState<ContentItem[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -55,15 +55,15 @@ export default function BehindTheScenes() {
 
             <main className="flex-1 w-full">
                 {/* Page Header */}
-                <section className="bg-primary text-light py-16">
+                <section className="bg-secondary py-16">
                     <div className="max-w-7xl mx-auto px-4">
-                        <h1 className="text-5xl font-bold mb-4 font-georgia">
-                            Behind the Scenes
+                        <h1 className="text-5xl font-bold mb-4 text-text-primary">
+                            Origins & Stories
                         </h1>
-                        <p className="text-lg text-light max-w-2xl leading-relaxed">
-                            Discover the art and craft behind Bean & Brew. From
-                            roasting journals to behind-the-scenes stories, see
-                            how we create exceptional coffee from seed to cup.
+                        <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
+                            Discover the art and craft behind Bean& Brew. From
+                            roasting journals to farmer stories, see how we
+                            create exceptional coffee from seed to cup.
                         </p>
                     </div>
                 </section>

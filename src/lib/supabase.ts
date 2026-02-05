@@ -17,11 +17,13 @@ export type Coffee = {
     coffee_type: string; // Arabica or Canephora
     process: string; // Washed, Natural, Honey, etc.
     roast_level: string; // Light, Medium, Medium-Dark, Dark
+    altitude_masl: number | null; // Altitude in meters above sea level
     farmer_name: string;
     farmer_location: string;
     farmer_country: string;
     farmer_story: string;
     farmer_image_url: string | null;
+    image_url: string | null; // Product image URL
     inventory: number;
     sold_count: number;
     created_at: string;

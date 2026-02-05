@@ -16,3 +16,4 @@ dist/
 out/
 *.log
 .turbo/
+.vercel

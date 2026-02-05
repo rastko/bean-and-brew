@@ -2,6 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --font-body: var(--font-inter);
+        --font-display: var(--font-playfair);
+    }
+
+    body {
+        font-family: var(--font-body);
+    }
+
+    .font-display {
+        font-family: var(--font-display);
+    }
+
+    .font-body {
+        font-family: var(--font-body);
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-coffee-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-coffee-800 transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg;
+    }
+
+    .btn-secondary {
+        @apply border-2 border-coffee-700 text-coffee-700 px-6 py-3 rounded-xl font-medium hover:bg-coffee-50 transition-all duration-300 hover:scale-105;
+    }
+
+    .filter-chip {
+        @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-cream-100 text-coffee-800 hover:bg-cream-200 transition-all duration-200 cursor-pointer border border-cream-200 hover:border-coffee-300;
+    }
+
+    .filter-chip.active {
+        @apply bg-coffee-700 text-white hover:bg-coffee-800 border-coffee-700;
+    }
+
+    .product-card {
+        @apply bg-white border border-cream-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500;
+    }
+}
+
+@layer utilities {
+    .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .animate-slideInUp {
+        animation: slideInUp 0.8s ease-out forwards;
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

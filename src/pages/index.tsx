@@ -1,95 +1,229 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CoffeeCard from "@/components/CoffeeCard";
-import { supabase, Coffee } from "@/lib/supabase";
+import Link from "next/link";
 
 export default function Home() {
-    const [coffees, setCoffees] = useState<Coffee[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [filter, setFilter] = useState<
-        "all" | "light" | "medium" | "dark" | "reserve"
-    >("all");
-
-    useEffect(() => {
-        fetchCoffees();
-    }, [filter]);
-
-    async function fetchCoffees() {
-        try {
-            setLoading(true);
-            let query = supabase.from("coffees").select("*");
-
-            if (filter === "light") {
-                query = query.eq("roast_level", "Light");
-            } else if (filter === "medium") {
-                query = query.in("roast_level", ["Medium", "Medium-Dark"]);
-            } else if (filter === "dark") {
-                query = query.eq("roast_level", "Dark");
-            } else if (filter === "reserve") {
-                query = query.eq("is_reserve", true);
-            }
-
-            const { data, error } = await query;
-
-            if (error) throw error;
-            setCoffees(data || []);
-        } catch (err) {
-            console.error("Error fetching coffees:", err);
-        } finally {
-            setLoading(false);
-        }
-    }
-
     return (
-        <div className="min-h-screen bg-light flex flex-col">
+        <div className="min-h-screen bg-primary flex flex-col">
             <Header />
 
             <main className="flex-1 w-full">
                 {/* HERO SECTION */}
-                <section className="bg-gradient-to-r from-primary via-secondary to-primary text-text-primary py-24 md:py-32 relative overflow-hidden">
-                    {/* Background pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                        <div className="absolute top-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-                    </div>
+                <section
+                    className="relative min-h-screen overflow-hidden"
+                    style={{ backgroundColor: "#F9F5EB" }}
+                >
+                    {/* Earthy background gradient */}
+                    <div
+                        className="absolute inset-0"
+                        style={{
+                            background:
+                                "linear-gradient(to bottom right, rgba(139, 148, 103, 0.05), rgba(184, 92, 56, 0.05))",
+                        }}
+                    ></div>
 
-                    <div className="relative max-w-7xl mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            {/* Left: Story */}
-                            <div>
-                                <p className="text-accent uppercase text-xs font-bold tracking-widest mb-4">
-                                    SINCE 1952
-                                </p>
-                                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight font-georgia">
-                                    Three generations. One obsession: the
-                                    perfect roast.
-                                </h1>
-                                <p className="text-lg text-text-primary mb-8 leading-relaxed font-georgia">
-                                    From the highlands of Ethiopia to the
-                                    volcanic soils of Guatemala, we've spent
-                                    over 70 years perfecting the art of coffee
-                                    roasting. Every bean tells a story of land,
-                                    labor, and love.
-                                </p>
+                    <div className="relative max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 min-h-screen flex items-center">
+                        <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
+                            {/* Left Column - Content */}
+                            <div className="space-y-8">
+                                {/* Badge */}
+                                <div
+                                    className="font-body inline-flex items-center px-4 py-2 rounded-full text-sm font-medium"
+                                    style={{
+                                        backgroundColor: "#8B9467",
+                                        color: "#F9F5EB",
+                                        fontWeight: "500",
+                                    }}
+                                >
+                                    <span
+                                        className="w-2 h-2 rounded-full mr-2"
+                                        style={{ backgroundColor: "#B85C38" }}
+                                    ></span>
+                                    Est. 1952 • Premium Coffee Roasters
+                                </div>
 
-                                {/* CTAs */}
-                                <div className="flex gap-4">
-                                    <button className="bg-accent text-light px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:shadow-xl transition-all duration-200 hover:scale-105">
-                                        SHOP COLLECTION
-                                    </button>
-                                    <button className="border-2 border-accent text-accent px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-accent hover:text-light transition-all duration-200">
-                                        LEARN MORE
-                                    </button>
+                                {/* Main heading */}
+                                <div className="space-y-4">
+                                    <h1
+                                        className="font-display text-6xl md:text-7xl font-bold leading-tight"
+                                        style={{
+                                            color: "#333333",
+                                        }}
+                                    >
+                                        Bean
+                                        <span
+                                            className="block"
+                                            style={{
+                                                fontWeight: "600",
+                                                color: "#B85C38",
+                                            }}
+                                        >
+                                            & Brew
+                                        </span>
+                                    </h1>
+
+                                    {/* Value-driven subheadline */}
+                                    <p
+                                        className="font-display text-2xl md:text-3xl font-medium leading-snug max-w-lg"
+                                        style={{
+                                            color: "#B85C38",
+                                        }}
+                                    >
+                                        Three generations. One obsession: the
+                                        perfect roast.
+                                    </p>
+
+                                    <p
+                                        className="font-body text-lg md:text-xl max-w-lg leading-relaxed"
+                                        style={{
+                                            fontWeight: "400",
+                                            color: "#333333",
+                                        }}
+                                    >
+                                        Since 1952, we&apos;ve sourced
+                                        single-origin beans from farmers we know
+                                        by name—then roasted them in small
+                                        batches the week you order. No
+                                        warehouses. No compromise.
+                                    </p>
+                                </div>
+
+                                {/* Action buttons */}
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <Link
+                                        href="/products"
+                                        className="font-body text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105 text-center"
+                                        style={{
+                                            backgroundColor: "#B85C38",
+                                        }}
+                                    >
+                                        Shop Collection
+                                    </Link>
+                                    <Link
+                                        href="/origins"
+                                        className="font-body text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105 text-center"
+                                        style={{
+                                            backgroundColor: "#8B9467",
+                                        }}
+                                    >
+                                        Learn More
+                                    </Link>
+                                </div>
+
+                                {/* Stats */}
+                                <div
+                                    className="grid grid-cols-3 gap-8 pt-8"
+                                    style={{
+                                        borderTop:
+                                            "1px solid rgba(139, 148, 103, 0.3)",
+                                    }}
+                                >
+                                    <div className="group cursor-default transition-all duration-300 hover:scale-105">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-xl">⭐</span>
+                                            <div
+                                                className="text-2xl md:text-3xl font-bold"
+                                                style={{ color: "#B85C38" }}
+                                            >
+                                                4.9
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="text-sm"
+                                            style={{ color: "#8B9467" }}
+                                        >
+                                            Rating
+                                        </div>
+                                    </div>
+                                    <div className="group cursor-default transition-all duration-300 hover:scale-105">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-xl">🌍</span>
+                                            <div
+                                                className="text-2xl md:text-3xl font-bold"
+                                                style={{ color: "#B85C38" }}
+                                            >
+                                                50+
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="text-sm"
+                                            style={{ color: "#8B9467" }}
+                                        >
+                                            Origins
+                                        </div>
+                                    </div>
+                                    <div className="group cursor-default transition-all duration-300 hover:scale-105">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-xl">☕</span>
+                                            <div
+                                                className="text-2xl md:text-3xl font-bold"
+                                                style={{ color: "#B85C38" }}
+                                            >
+                                                10k+
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="text-sm"
+                                            style={{ color: "#8B9467" }}
+                                        >
+                                            Loved by coffee drinkers
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Right: Visual */}
-                            <div className="flex justify-center md:justify-end">
-                                <div className="relative w-80 h-80 md:w-96 md:h-96">
-                                    <div className="absolute inset-0 bg-accent rounded-full opacity-20 blur-2xl"></div>
-                                    <div className="absolute inset-0 flex items-center justify-center text-9xl opacity-50">
-                                        ☕
+                            {/* Right Column - Image */}
+                            <div className="relative mt-12 lg:mt-0">
+                                <div className="relative">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1662462761983-1d9125fa8ee8?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Premium coffee beans"
+                                        className="w-full h-[400px] md:h-[500px] rounded-2xl shadow-2xl object-cover"
+                                        style={{
+                                            filter: "saturate(1.3) sepia(0.12) brightness(1.10) contrast(1.28) hue-rotate(-5deg)",
+                                            objectPosition: "center 85%",
+                                        }}
+                                    />
+
+                                    {/* Floating card */}
+                                    <div
+                                        className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 rounded-xl p-4 md:p-6 shadow-xl hidden sm:block"
+                                        style={{
+                                            backgroundColor: "#F9F5EB",
+                                            border: "1px solid #8B9467",
+                                        }}
+                                    >
+                                        <div className="flex items-center space-x-3">
+                                            <div
+                                                className="w-12 h-12 rounded-full flex items-center justify-center"
+                                                style={{
+                                                    backgroundColor: "#8B9467",
+                                                }}
+                                            >
+                                                <span className="text-white font-bold">
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    className="font-display font-semibold"
+                                                    style={{
+                                                        color: "#B85C38",
+                                                    }}
+                                                >
+                                                    Exceptional Quality
+                                                </div>
+                                                <div
+                                                    className="font-body text-sm"
+                                                    style={{
+                                                        color: "#8B9467",
+                                                    }}
+                                                >
+                                                    From 1,200+ reviews
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -97,151 +231,19 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* TRUST SIGNALS SECTION */}
-                <section className="bg-light py-16 border-b border-border">
+                {/* CTA SECTION */}
+                <section className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                            {/* Rating */}
-                            <div className="text-center">
-                                <p className="text-4xl font-bold text-accent mb-2">
-                                    4.9★
-                                </p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
-                                    Customer Rating
-                                </p>
-                                <p className="text-xs text-text-muted mt-1">
-                                    1,200+ reviews
-                                </p>
-                            </div>
-
-                            {/* Origins */}
-                            <div className="text-center">
-                                <p className="text-4xl font-bold text-secondary mb-2">
-                                    50+
-                                </p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
-                                    Coffee Origins
-                                </p>
-                                <p className="text-xs text-text-muted mt-1">
-                                    Six continents
-                                </p>
-                            </div>
-
-                            {/* Customers */}
-                            <div className="text-center">
-                                <p className="text-4xl font-bold text-accent mb-2">
-                                    10k+
-                                </p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
-                                    Happy Customers
-                                </p>
-                                <p className="text-xs text-text-muted mt-1">
-                                    And growing daily
-                                </p>
-                            </div>
-
-                            {/* Direct Trade */}
-                            <div className="text-center">
-                                <p className="text-4xl font-bold text-secondary mb-2">
-                                    100%
-                                </p>
-                                <p className="text-sm text-text-muted font-semibold uppercase tracking-wide">
-                                    Direct Trade
-                                </p>
-                                <p className="text-xs text-text-muted mt-1">
-                                    Fair prices always
-                                </p>
-                            </div>
+                        <div className="text-center">
+                            <Link
+                                href="/products"
+                                className="inline-block text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors hover:opacity-90"
+                                style={{ backgroundColor: "#B85C38" }}
+                            >
+                                Shop Our Coffee Collection
+                            </Link>
                         </div>
                     </div>
-                </section>
-
-                {/* COLLECTION HEADER */}
-                <section className="bg-light max-w-7xl mx-auto w-full px-4 pt-16">
-                    <h2 className="text-4xl font-bold text-primary mb-2">
-                        Our Collection
-                    </h2>
-                    <p className="text-text-muted mb-8">
-                        Hand-selected coffees from direct relationships with
-                        farmers worldwide.
-                    </p>
-
-                    {/* FILTER PILLS */}
-                    <div className="flex flex-wrap gap-3 mb-12">
-                        <button
-                            onClick={() => setFilter("all")}
-                            className={`px-5 py-3 rounded-full uppercase text-xs font-bold tracking-wider transition-all duration-200 ${
-                                filter === "all"
-                                    ? "bg-primary text-light shadow-md"
-                                    : "bg-light border-2 border-primary text-primary hover:bg-primary hover:text-light"
-                            }`}
-                        >
-                            All Coffees
-                        </button>
-                        <button
-                            onClick={() => setFilter("light")}
-                            className={`px-5 py-3 rounded-full uppercase text-xs font-bold tracking-wider transition-all duration-200 ${
-                                filter === "light"
-                                    ? "bg-secondary text-light shadow-md"
-                                    : "bg-light border-2 border-secondary text-secondary hover:bg-secondary hover:text-light"
-                            }`}
-                        >
-                            Light Roast
-                        </button>
-                        <button
-                            onClick={() => setFilter("medium")}
-                            className={`px-5 py-3 rounded-full uppercase text-xs font-bold tracking-wider transition-all duration-200 ${
-                                filter === "medium"
-                                    ? "bg-secondary text-light shadow-md"
-                                    : "bg-light border-2 border-secondary text-secondary hover:bg-secondary hover:text-light"
-                            }`}
-                        >
-                            Medium Roast
-                        </button>
-                        <button
-                            onClick={() => setFilter("dark")}
-                            className={`px-5 py-3 rounded-full uppercase text-xs font-bold tracking-wider transition-all duration-200 ${
-                                filter === "dark"
-                                    ? "bg-primary text-light shadow-md"
-                                    : "bg-light border-2 border-primary text-primary hover:bg-primary hover:text-light"
-                            }`}
-                        >
-                            Dark Roast
-                        </button>
-                        <button
-                            onClick={() => setFilter("reserve")}
-                            className={`px-5 py-3 rounded-full uppercase text-xs font-bold tracking-wider transition-all duration-200 ${
-                                filter === "reserve"
-                                    ? "bg-accent text-primary shadow-md"
-                                    : "bg-light border-2 border-accent text-accent hover:bg-accent hover:text-primary"
-                            }`}
-                        >
-                            🎖️ Roaster's Reserve
-                        </button>
-                    </div>
-                </section>
-
-                {/* COFFEE GRID */}
-                <section className="max-w-7xl mx-auto w-full px-4 pb-16">
-                    {loading ? (
-                        <div className="flex justify-center items-center h-64">
-                            <div className="text-secondary text-xl font-semibold">
-                                Brewing up our selection...
-                            </div>
-                        </div>
-                    ) : coffees.length === 0 ? (
-                        <div className="flex justify-center items-center h-64">
-                            <div className="text-text-muted text-xl">
-                                No coffees found for this filter
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {coffees.map((coffee) => (
-                                <CoffeeCard key={coffee.id} coffee={coffee} />
-                            ))}
-                        </div>
-                    )}
                 </section>
             </main>
 
