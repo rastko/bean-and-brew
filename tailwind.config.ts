@@ -9,14 +9,14 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: "#1a1a1a",      // Deep black
-                secondary: "#8B7355",    // Coffee brown
-                accent: "#D4A574",       // Gold/tan
-                light: "#FAFAF8",        // Off-white
-                border: "#EEEEEE",       // Light border
+                primary: "#F5E6D3",      // Warm cream
+                secondary: "#D4885A",    // Warm brown
+                accent: "#C85A3A",       // Rust/orange
+                light: "#FFFBF7",        // Warm off-white
+                border: "#E8DCC8",       // Warm border
                 text: {
-                    primary: "#2C2C2C",
-                    muted: "#999999",
+                    primary: "#5C4A3D",
+                    muted: "#9B8B7E",
                     light: "#FFFFFF",
                 },
             },

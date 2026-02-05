@@ -45,7 +45,7 @@ export default function Home() {
 
             <main className="flex-1 w-full">
                 {/* HERO SECTION */}
-                <section className="bg-gradient-to-r from-primary via-secondary to-primary text-light py-24 md:py-32 relative overflow-hidden">
+                <section className="bg-gradient-to-r from-primary via-secondary to-primary text-text-primary py-24 md:py-32 relative overflow-hidden">
                     {/* Background pattern */}
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
@@ -62,16 +62,16 @@ export default function Home() {
                                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight font-georgia">
                                     Three generations. One obsession: the perfect roast.
                                 </h1>
-                                <p className="text-lg text-light mb-8 leading-relaxed font-georgia">
+                                <p className="text-lg text-text-primary mb-8 leading-relaxed font-georgia">
                                     From the highlands of Ethiopia to the volcanic soils of Guatemala, we've spent over 70 years perfecting the art of coffee roasting. Every bean tells a story of land, labor, and love.
                                 </p>
 
                                 {/* CTAs */}
                                 <div className="flex gap-4">
-                                    <button className="bg-accent text-primary px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:shadow-xl transition-all duration-200 hover:scale-105">
+                                    <button className="bg-accent text-light px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:shadow-xl transition-all duration-200 hover:scale-105">
                                         SHOP COLLECTION
                                     </button>
-                                    <button className="border-2 border-accent text-accent px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-accent hover:text-primary transition-all duration-200">
+                                    <button className="border-2 border-accent text-accent px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-accent hover:text-light transition-all duration-200">
                                         LEARN MORE
                                     </button>
                                 </div>
