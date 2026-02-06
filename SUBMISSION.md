@@ -127,13 +127,7 @@ The Bean & Brew project demonstrates the complete BMAD lifecycle:
 - Database schema documentation
 - Design implementation details (colors, typography, refinements)
 - BMAD methodology applied with phase breakdown
-
-**QUICKSTART.md**
-
-- Step-by-step setup instructions
-- Environment configuration
-- Database initialization
-- Local development & deployment
+  
 
 ### Design System
 
@@ -331,37 +325,6 @@ vercel
 - ✅ AI-assisted development with Claude Code
 - ✅ Efficient scope management (MVP focused, Phase 2 deferred)
 - ✅ Production-ready code, not just a prototype
-
----
-
-## 📈 How This Demonstrates the Role
-
-### Full-Stack Development
-
-- Frontend: React components, Next.js routing, TypeScript
-- Backend: Supabase API, database schema, RLS policies
-- DevOps: Environment config, deployment setup, Vercel integration
-
-### Product Ownership
-
-- User research (personas, pain points)
-- Feature prioritization (MVP vs Phase 2)
-- Requirements definition (PRD with acceptance criteria)
-- Roadmap planning (3 phases with concrete deliverables)
-
-### AI-Assisted Development
-
-- Leveraged Claude Code for rapid implementation
-- Maintained code quality and architecture
-- Documented decisions and rationale
-- Delivered production-ready software
-
-### Ownership Mindset
-
-- Takes full responsibility for product & technology
-- Considers business model & unit economics
-- Plans for scalability & growth
-- Documents thoroughly for handoff or expansion
 
 ---
 
