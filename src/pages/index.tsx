@@ -83,7 +83,7 @@ export default function Home() {
                                     >
                                         Since 1952, we&apos;ve sourced
                                         single-origin beans from farmers we know
-                                        by name—then roasted them in small
+                                        by name, then roasted them in small
                                         batches the week you order. No
                                         warehouses. No compromise.
                                     </p>
