@@ -169,31 +169,7 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
                         Processing
                     </span>
                     <span className="text-coffee-800 text-sm font-semibold flex items-center gap-1.5">
-                        {coffee.process === "Washed" ? (
-                            <svg
-                                className="w-4 h-4"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
-                            </svg>
-                        ) : coffee.process === "Natural" ? (
-                            <svg
-                                className="w-4 h-4"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.1 0-2.05 1.02-4.05 2.85-6.35 1.45-1.65 3.1-3.38 3.15-3.44.05.06 1.7 1.79 3.15 3.44 1.83 2.3 2.85 4.3 2.85 6.35 0 3.53-2.65 6.1-6 6.1z" />
-                            </svg>
-                        ) : (
-                            <svg
-                                className="w-4 h-4"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                            </svg>
-                        )}
+                        <span>{getProcessIcon(coffee.process)}</span>
                         {coffee.process}
                     </span>
                 </div>
