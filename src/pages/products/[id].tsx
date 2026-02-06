@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { supabase, Coffee } from "@/lib/supabase";
@@ -201,9 +202,17 @@ export default function ProductDetailPage() {
                             {/* Left: Image */}
                             <div className="space-y-4">
                                 <div className="relative aspect-square bg-gradient-to-br from-cream-100 to-cream-200 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
-                                    <div className="text-[12rem] opacity-40">
-                                        ☕
-                                    </div>
+                                    <Image
+                                        src={
+                                            coffee.image_url ||
+                                            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800"
+                                        }
+                                        alt={coffee.name}
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
+                                    />
                                     {coffee.is_reserve && (
                                         <div className="absolute top-6 right-6 bg-accent text-white px-4 py-2 rounded-full text-sm font-bold shadow-md">
                                             LIMITED RESERVE
