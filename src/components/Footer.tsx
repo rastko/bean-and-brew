@@ -47,7 +47,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="/"
+                                    href="/origins"
                                     className="hover:text-accent transition duration-200"
                                 >
                                     Farmer Stories
@@ -55,7 +55,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="/"
+                                    href="/origins"
                                     className="hover:text-accent transition duration-200"
                                 >
                                     Sustainability

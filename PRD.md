@@ -136,19 +136,6 @@ The following features are intentionally deferred to Phase 2 to keep MVP lean an
 | **As a** social enthusiast **I want to** find limited-edition coffees **so that** I can share something exclusive with friends | <ul><li>Reserve coffees clearly marked as "Limited Edition"</li><li>Exclusivity and scarcity messaging prominent</li><li>Visual design shareable (high-quality photos)</li><li>Supply info visible to create urgency</li></ul>                         |
 | **As a** brand advocate **I want to** tell my friends the Bean & Brew story **so that** they understand why it's special       | <ul><li>Brand story accessible and compelling on Origins page</li><li>Farmer stories with visuals shareable</li><li>Content about roasting process educational and interesting</li><li>Clear differentiation from commodity coffee messaging</li></ul> |
 
-### Secondary User: Brand Advocate (Mark)
-
-**Motivation:**
-
-- Wants to share exclusive, unique products with friends
-- Enjoys talking about quality and craftsmanship
-- Values being "in the know" about limited editions
-
-**Key Need:**
-
-- Reserve coffee clearly labeled as exclusive
-- Story compelling enough to share
-
 ---
 
 ## ✨ Features & Requirements
@@ -467,17 +454,15 @@ CREATE TABLE content (
 
 ### Color Palette
 
-```
-Primary Brand: #B85C38 (Burnt Sienna)
-Secondary: #8B9467 (Organic Green)
-Light: #F9F5EB (Cream)
-Text: #2C2C2C (Dark Gray)
-```
+- Primary Brand: #B85C38 (Burnt Sienna)
+- Secondary: #8B9467 (Organic Green)
+- Light: #F9F5EB (Cream)
+- Text: #2C2C2C (Dark Gray)
 
 ### Typography
 
-- Headlines: System fonts (bold)
-- Body: System fonts (readable)
+- Headlines: Playfair Display (serif, elegant)
+- Body: Inter (sans-serif, readable)
 - High contrast for accessibility
 
 ### Responsive Breakpoints
@@ -566,20 +551,18 @@ The following features are explicitly **NOT included** in MVP:
 | Testing & QA               | ✅ Complete | Feb 5 |
 | Documentation              | ✅ Complete | Feb 5 |
 | Local Testing              | ✅ Complete | Feb 5 |
-| Vercel Deployment          | ⏳ Pending  | Feb 5 |
-| Job Application Submission | ⏳ Pending  | Feb 5 |
+| Vercel Deployment          | ✅ Complete | Feb 6 |
+| Job Application Submission | ✅ Complete | Feb 6 |
 
 ---
 
 ## 📚 Documentation Provided
 
 1. **README.md** — Project overview and quick start
-2. **QUICKSTART.md** — 5-minute setup guide
-3. **BMAD_APPLICATION.md** — Methodology walkthrough
-4. **DELIVERABLE.md** — What's been built
-5. **PRD.md** — This document
-6. **Code Comments** — Inline documentation
-7. **TypeScript Types** — Self-documenting code
+2. **SUBMISSION.md** — What's been built
+3. **PRD.md** — This document
+4. **Code Comments** — Inline documentation
+5. **TypeScript Types** — Self-documenting code
 
 ---
 
