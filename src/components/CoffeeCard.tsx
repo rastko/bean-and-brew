@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Coffee } from "@/lib/supabase";
 
 interface CoffeeCardProps {
@@ -82,14 +83,21 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
             {/* Image Section with Add Button */}
             <div className="relative h-48 bg-gradient-to-br from-coffee-700 to-coffee-500 overflow-hidden">
                 {/* Product image */}
-                <div
-                    className="absolute inset-0 opacity-100"
-                    style={{
-                        backgroundImage: `url('${coffee.image_url || "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600"}')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                ></div>
+                <Image
+                    src={
+                        coffee.image_url ||
+                        "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600"
+                    }
+                    alt={coffee.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                {coffee.is_reserve && (
+                    <div className="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest shadow-lg">
+                        RESERVE
+                    </div>
+                )}
                 <button
                     onClick={addToCart}
                     className="absolute top-4 right-4 bg-accent text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-105 z-10 opacity-0 group-hover:opacity-100"
